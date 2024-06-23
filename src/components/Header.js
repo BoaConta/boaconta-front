@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="header">
       <h1>Olá,</h1>
-      <p>Acesse sua conta ou<br/> cadastre-se!</p>
+      <p>Acesse sua conta ou<br className="conditional-br" /> cadastre-se!</p>
     </div>
   );
 };
