@@ -20,7 +20,7 @@ const LoginForm = () => {
             <PasswordField label="Senha" placeholder="**********" /> 
           </div>
         </div>
-        <div className="options d-flex justify-content-between align-items-center mb-3">
+        <div id='options' className="options d-flex justify-content-between align-items-center mb-3">
           <Checkbox label="Manter conectado" />  
           <Link text="Esqueci a senha" href="#" />
         </div>
