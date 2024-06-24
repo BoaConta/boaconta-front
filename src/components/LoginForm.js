@@ -17,11 +17,11 @@ const LoginForm = () => {
             <InputField label="E-mail" type="email" placeholder="mariareis@gmail.com" />
           </div>
           <div className="mb-3">
-            <PasswordField label="Senha" placeholder="**********" />
+            <PasswordField label="Senha" placeholder="**********" /> 
           </div>
         </div>
         <div className="options d-flex justify-content-between align-items-center mb-3">
-          <Checkbox label="Manter conectado" />
+          <Checkbox label="Manter conectado" />  
           <Link text="Esqueci a senha" href="#" />
         </div>
         <Button text="Entrar" className="btn-login btn-primary w-100 mb-3" />
