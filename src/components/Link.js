@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Link = ({ text, href }) => {
   return (
@@ -6,6 +7,11 @@ const Link = ({ text, href }) => {
       {text}
     </a>
   );
+};
+
+Link.propTypes = {
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
 };
 
 export default Link;
