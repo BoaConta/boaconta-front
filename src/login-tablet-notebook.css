@@ -1,5 +1,4 @@
-/*Infelizmente na tela de tablet está tendo que rolar para baixo para visualizar a linha de criar conta.*/
-
+/* Essa é apenas para tablet. O padding precisa ser específico */
 
 @media (min-width: 768px) and (max-width: 1919px) {
 
@@ -48,9 +47,13 @@
 	}
 
 	.login-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		width: 50%;
-		padding: 0 1rem 0rem 1rem;
-		gap: 0.5rem;
+		padding: 0 1rem 0 1rem;
+		gap: 3rem;
 	}
 
 	.mb-3 {
@@ -85,14 +88,19 @@
 	}
 
 	.forms {
-		gap: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		align-self: stretch;
 	}
 
 	.forms-area {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.5rem;
+		gap: 1.75rem;
 		align-self: stretch;
 	}
 
@@ -110,7 +118,7 @@
 		height: 5rem;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.25rem;
+		gap: 0.5rem;
 		align-self: stretch;
 	}
 
@@ -125,9 +133,9 @@
 		/* 150% */
 	}
 
-	.form-control {
+	.input-field input {
 		display: flex;
-		padding: 0.25rem 1rem;
+		padding: 0.5rem 1rem;
 		align-items: center;
 		gap: 0.25rem;
 		flex: 1 0 0;
@@ -262,8 +270,8 @@
 	}
 
 	.form-check-input {
-		width: 1rem;
-		height: 1rem;
+		width: 1.5rem;
+		height: 1.5rem;
 		border-radius: 0.5rem;
 		border: 1px solid var(--Primary, #3498DB);
 	}
@@ -292,8 +300,33 @@
 
 	.text-center {
 		display: flex;
-		width: 100%;
+		width: 50.15%;
 		justify-content: space-between;
-		margin-top: 0.5rem;
+		align-items: center;
+		margin: 0.5rem 0 0 0;
+		gap: 0.25rem;
+	}
+
+	.link {
+		display: flex;
+		padding: 0.375rem 0rem;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: var(--Primary, #3498DB);
+		text-align: center;
+		/* Title/Medium Bold */
+		font-family: Poppins;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1.5rem;
+		/* 150% */
+	}
+}
+
+@media (min-width: 1199px) and (max-width: 1919px) {
+	.login-form {
+		padding: 0 3rem 0 5rem;
 	}
 }

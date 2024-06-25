@@ -140,7 +140,7 @@
 		align-self: stretch;
 		border-radius: 0.5rem;
 		border: 1px solid var(--Gray-300, #C9C9C9);
-		background: var(--Color-Typography-1-color-typography-1-pure, #FFF);	
+		background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
 	}
 
 	.input-field input::placeholder {
@@ -317,4 +317,10 @@
 		/* 150% */
 	}
 
+	.text-center {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.25rem;
+	}
 }
