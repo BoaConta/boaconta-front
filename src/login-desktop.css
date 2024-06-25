@@ -10,7 +10,7 @@
 	/* Adicione outras cores conforme necessário */
 }
 
-@media (min-width: 940px) {
+@media (min-width: 1920px) {
 
 	.app {
 		width: 100% !important;
@@ -22,6 +22,7 @@
 	}
 
 	.wrapper {
+		display: block;
 		width: 50% !important;
 		height: 100vh;
 		background: url('./assets/img/wapperlogin.png');
