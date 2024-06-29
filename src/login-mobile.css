@@ -2,13 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  @media (max-width: 767px) {
-   body {
+@media (max-width: 767px) {
+  body {
     margin: 0;
     padding: 0;
     display: flex;
     align-items: flex-start;
-    gap: 0.625rem;
     font-family: Poppins;
     align-items: center;
     justify-content: center;
@@ -26,10 +25,11 @@
 
   .app {
     display: flex;
-    height: 50.75rem;
-    padding: 4rem 1rem;
+    height: 100vh;
+    padding: 0rem 1rem;
+    align-items: center;
     justify-content: center;
-    gap: 0.625rem;
+    width: 100%;
     background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
   }
 
@@ -86,12 +86,18 @@
     margin: 0;
   }
 
+  .conditional-br {
+    display: block !important;
+  }
+
   .forms-area {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.75rem;
     align-self: stretch;
+    width: 100% !important;
+
   }
 
   .input-field,
@@ -102,6 +108,7 @@
     align-items: flex-start;
     gap: 0.5rem;
     align-self: stretch;
+    width: 100% !important;
   }
 
   .input-field label,
@@ -110,23 +117,36 @@
 
     /* Title/Medium Regular */
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
+    margin: 0 !important;
     /* 150% */
+  }
+
+  .mb-3,
+  .mb-4,
+  .mx-2,
+  .ms-2 {
+    margin: 0 !important;
+  }
+
+  .mb-3,
+  .mb-4 {
+    width: 100% !important;
+
   }
 
   .input-field input,
   .password-field input {
+    width: 100% !important;
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     align-items: center;
     gap: 0.25rem;
-    flex: 1 0 0;
     align-self: stretch;
-    border-radius: 0.5rem;
-    line-height: 1.5rem;
+    border-radius: 0.5rem !important;
     border: 1px solid var(--Gray-300, #C9C9C9);
     background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
   }
@@ -135,16 +155,39 @@
   .password-field input::placeholder {
     flex: 1 0 0;
     color: var(--Gray-700, #858585);
+
     /* Body/Large Regular */
     font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+    line-height: 1.5rem;
+    /* 150% */
     /* 150% */
   }
 
   .password-field input {
     position: relative;
+  }
+
+  .eye-btn {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: 30%;
+    margin-left: -40px;
+    /* Ajuste conforme necessário */
+    z-index: 2;
+  }
+
+  .eye-btn img {
+    width: 1.25rem;
+    /* Ajuste conforme necessário */
+    height: 1.25rem;
+    /* Ajuste conforme necessário */
   }
 
   .options {
@@ -154,18 +197,36 @@
     align-items: center;
   }
 
-  .checkbox {
+  .form-check {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .checkbox input {
+  .form-check-input {
     width: 1.5rem;
     height: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem !important;
     border: 0.0625rem solid var(--Primary, #3498DB);
+    margin: 0 !important;
+    padding: 0 !important;
   }
+
+  .form-check-label {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Body/Medium Regular */
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    /* 142.857% */
+  }
+
 
   .link {
     color: var(--Primary, #3498DB);
@@ -181,18 +242,7 @@
     text-decoration: none;
   }
 
-  .button,
-  .google-button {
-    display: block;
-    width: 100%;
-    padding: 0.625rem;
-    text-align: center;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-
-  .button {
+  .btn-login {
     display: flex;
     padding: 1rem 0.75rem 1rem 1rem;
     justify-content: center;
@@ -200,6 +250,7 @@
     gap: 0.25rem;
     align-self: stretch;
     border-radius: 1rem;
+    border: none;
     background: var(--Primary, #3498DB);
     color: var(--Gray-0, var(--Color-Typography-1-color-typography-1-pure, #FFF));
     text-align: center;
@@ -213,7 +264,7 @@
     /* 150% */
   }
 
-  .google-button {
+  .g-btn {
     display: flex;
     padding: 1rem 0.75rem 1rem 1rem;
     justify-content: center;
@@ -222,8 +273,8 @@
     align-self: stretch;
     border-radius: 1rem;
     border: 0.7px solid var(--Primary, #3498DB);
-    background: var(--Gray-0, #FFF);
-    color: var(--Primary, #3498DB);
+    background: #FFF;
+    color: #3498DB;
     text-align: center;
 
     /* Title/Medium Bold */
@@ -240,21 +291,36 @@
     align-items: center;
     gap: 0.5rem;
     align-self: stretch;
+    margin: 0 !important;
   }
 
   .divider hr {
-    flex-grow: 1;
-    border: none;
-    border-top: 1px solid #858585;
-    ;
-    margin: 0 0.5rem;
+    width: 15.40625rem;
+    height: 0.0625rem;
+    background: #858585;
+    margin: 0 !important;
+    /* Title/Small Bold */
   }
 
-  .create-account {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  } 
+  .divider span {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
   }
 
-  
+  .text-center {
+    margin: 0 !important;
+  }
+
+
+  /* 142.857% */
+}
+
+.create-account {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
