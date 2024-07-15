@@ -16,9 +16,16 @@ ReactDOM.render(
       richColors
       toastOptions={{
         style: {
-          background: "#FCE07E",
+          display: "flex",
+          padding: "0.5rem 1rem",
+          alignItems: "flex-start",
+          gap: "0.5rem",
+          alignSelf: "stretch",
+          background: "#FFF4D6",
           color: "#414141",
-          borderColor: "#803D00",
+          border: "1px solid",
+          borderColor: "#FCE07E",
+          borderRadius: "0.5rem",
         },
       }}
     />
