@@ -6,6 +6,8 @@ import Checkbox from './Checkbox';
 import Link from './Link';
 import Button from './Button';
 import Divider from './Divider';
+import { toast } from 'sonner';
+
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +29,12 @@ const LoginForm = () => {
 
     if (data.error) {
       if (data.error === 'EMAIL_NOT_FOUND') {
-        setErrors(prevErrors => ({ ...prevErrors, email: 'E-mail não encontrado.' }));
+        toast('My toast', {
+          className: 'my-classname',
+          description: 'My description',
+          duration: 5000,
+          icon: <MyIcon />,
+        });
       } else if (data.error === 'INVALID_PASSWORD') {
         setErrors(prevErrors => ({ ...prevErrors, password: 'Senha incorreta.' }));
       }
