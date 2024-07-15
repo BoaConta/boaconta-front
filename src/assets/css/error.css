@@ -1,0 +1,14 @@
+.error-message {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: absolute;
+	left: 1rem;
+	top: 3rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--Yellow-200, #FCE07E);
+	background: var(--Yellow-100, #FFF4D6);
+	padding: 1rem;
+	color: red;
+  }
+  

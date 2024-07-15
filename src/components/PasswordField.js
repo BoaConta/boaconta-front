@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import eyeOn from '../assets/img/EyeOn.svg';
 
-const PasswordField = ({ label, placeholder }) => {
+const PasswordField = ({ label, placeholder, value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -12,11 +13,13 @@ const PasswordField = ({ label, placeholder }) => {
           className="form-control"
           type={showPassword ? 'text' : 'password'}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
         />
         <div className="input-group-append">
           <button 
             type="button" 
-            className="btn btn-outline-secondary eye-btn" //O botão está sumindo durante o input.
+            className="btn btn-outline-secondary eye-btn"
             onClick={() => setShowPassword(!showPassword)}
           >
             <img src={eyeOn} alt={showPassword ? 'Ocultar senha' : 'Mostrar senha'} />
@@ -25,6 +28,13 @@ const PasswordField = ({ label, placeholder }) => {
       </div>
     </div>
   );
+};
+
+PasswordField.propTypes = {
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default PasswordField;
