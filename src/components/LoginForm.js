@@ -9,8 +9,12 @@ import Divider from './Divider';
 import { ToastContainer, toast } from 'react-toastify';
 //import { TriangleAlert, X } from 'lucide-react';
 
-function notify() {
-  toast.error('E-mail ou senha inválidos')
+function notifyEmail() {
+  toast.error('E-mail inválido')
+}
+
+function notifyPass() {
+  toast.error('Senha inválida')
 }
 
 const LoginForm = () => {
@@ -32,7 +36,7 @@ const LoginForm = () => {
               onChange={e => setEmail(e.target.value)}
             />
             {errors.email && <div className="error-message">{errors.email}</div>}
-          </div>      <button onClick={notify}>Notify !</button>
+          </div>      <button onClick={notifyEmail}>Notify !</button>
           <div className="mb-3">
             <PasswordField
               label="Senha"
