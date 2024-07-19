@@ -6,11 +6,21 @@ import Checkbox from './Checkbox';
 import Link from './Link';
 import Button from './Button';
 import Divider from './Divider';
-import { ToastContainer, toast } from 'react-toastify';
+import Warn from '../assets/img/Warning.svg';
+import Close from '../assets/img/Closed.svg'
+import { toast } from 'react-toastify';
 //import { TriangleAlert, X } from 'lucide-react';
 
 function notifyEmail() {
-  toast.error('E-mail inválido')
+  toast('E-mail inválido', {
+    bodyStyle: {background: '#FFF4D6'},
+    
+    progressStyle: {background:'#803D00'},
+    style: {background: '#FFF4D6', border: '1px solid #FCE07E'},
+    type: 'warning',
+    icon: ({theme, type}) =>  <img src={Warn} alt='Warning alert icon'/>,
+  })
+  
 }
 
 function notifyPass() {
@@ -36,7 +46,8 @@ const LoginForm = () => {
               onChange={e => setEmail(e.target.value)}
             />
             {errors.email && <div className="error-message">{errors.email}</div>}
-          </div>      <button onClick={notifyEmail}>Notify !</button>
+          </div>
+           {/* <button onClick={notifyEmail}>Notify !</button> */}
           <div className="mb-3">
             <PasswordField
               label="Senha"
