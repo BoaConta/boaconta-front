@@ -6,60 +6,17 @@ import Checkbox from './Checkbox';
 import Link from './Link';
 import Button from './Button';
 import Divider from './Divider';
-import { toast } from 'sonner';
-import { TriangleAlert, X } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
+//import { TriangleAlert, X } from 'lucide-react';
 
+function notify() {
+  toast.error('E-mail ou senha inválidos')
+}
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState({ email: '', password: '' });
-
-  const handleLogin = async () => {
-    setErrors({ email: '', password: '' });
-
-    const response = await fetch('URL_DO_SEU_BACKEND/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
-
-    const data = await response.json();
-
-    if (data.error) {
-      if (data.error === 'EMAIL_NOT_FOUND') {
-        toast('Erro', {
-          position: 'top-center',
-          className: 'my-classname',
-          description: 'Erro',
-          duration: 1000,
-          icon: <TriangleAlert />
-          ,
-        });
-      } else if (data.error === 'INVALID_PASSWORD') {
-        setErrors(prevErrors => ({ ...prevErrors, password: 'Senha incorreta.' }));
-      }
-    } else {
-      // Lógica para sucesso do login
-      console.log('Login bem-sucedido');
-    }
-  };
-
-  const handleToast = () => {
-    toast('Erro', {
-      className: 'my-classname',
-      description: 'My description',
-      duration: 7000,
-      position: 'top-center',
-      cancel: {
-        label: <X  />,
-        onClick: () => console.log('Cancel!'),
-      },
-      icon: <TriangleAlert color="#803D00" />,
-    });
-  }
+  const [errors] = useState({ email: '', password: '' });
 
   return (
     <div className="login-form">
@@ -75,8 +32,7 @@ const LoginForm = () => {
               onChange={e => setEmail(e.target.value)}
             />
             {errors.email && <div className="error-message">{errors.email}</div>}
-          </div>
-          <button type="button" onClick={handleToast}>test toast</button>
+          </div>      <button onClick={notify}>Notify !</button>
           <div className="mb-3">
             <PasswordField
               label="Senha"
@@ -91,7 +47,7 @@ const LoginForm = () => {
           <Checkbox label="Manter conectado" />
           <Link text="Esqueci a senha" href="#" />
         </div>
-        <Button text="Entrar" className="btn-login btn-primary w-100 mb-3" onClick={handleLogin} />
+        <Button text="Entrar" className="btn-login btn-primary w-100 mb-3" />
         <Divider text="ou" />
         <Button text="Entrar com Google" isGoogle className="g-btn btn btn-danger w-100 mb-3" />
         <p className="text-center">Ainda não tem conta? <Link text="Criar conta" href="#" /></p>

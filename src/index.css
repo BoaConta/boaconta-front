@@ -178,7 +178,7 @@ body {
   text-decoration: none;
 }
 
-.button,
+button,
 .google-button {
   display: block;
   width: 100%;
@@ -189,7 +189,7 @@ body {
   cursor: pointer;
 }
 
-.button {
+button {
   display: flex;
   padding: 1rem 0.75rem 1rem 1rem;
   justify-content: center;
