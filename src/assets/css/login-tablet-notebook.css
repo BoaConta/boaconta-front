@@ -222,6 +222,10 @@
 		/* Ajuste conforme necessário */
 	}
 
+	.eye-btn:hover {
+		background: transparent !important;
+	}
+
 	.divider {
 		margin: 0 !important;
 	}
@@ -310,6 +314,10 @@
 		font-weight: 700;
 		line-height: 1.5rem;
 		/* 150% */
+	}
+
+	.g-btn:hover {
+		background-color: #bb2d3b !important;
 	}
 
 	.text-center {

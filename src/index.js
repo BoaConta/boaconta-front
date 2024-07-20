@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './reset-global.css'
+import './assets/css/reset-global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/login-mobile.css';
 import './assets/css/login-desktop.css';
