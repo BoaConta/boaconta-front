@@ -61,8 +61,8 @@ const LoginForm = () => {
               onChange={e => setEmail(e.target.value)}
             />
           </div>
-          Adicionei esse botão abaixo para testar o toaster 😁
-            <button onClick={() => notify('Teste de notificação!')}>Notify !</button>
+          {/* Adicionei esse botão abaixo para testar o toaster 😁
+            <button onClick={() => notify('Teste de notificação!')}>Notify !</button> */}
           <div className="mb-3">
             <PasswordField
               label="Senha"
