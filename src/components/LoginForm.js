@@ -76,7 +76,7 @@ const LoginForm = () => {
           <Checkbox label="Manter conectado" />
           <Link text="Esqueci a senha" href="#" />
         </div>
-        <Button text="Entrar" click={login} className="btn-login btn-primary w-100 mb-3" />
+        <button onClick={login} className="btn-login btn-primary w-100 mb-3">Entrar</button>
         <Divider text="ou" />
         <Button text="Entrar com Google" isGoogle className="g-btn btn btn-danger w-100 mb-3" />
         <p className="text-center">Ainda não tem conta? <Link text="Criar conta" href="#" /></p>
