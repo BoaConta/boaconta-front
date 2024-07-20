@@ -4,19 +4,18 @@ import InputField from './InputField';
 import PasswordField from './PasswordField';
 import Checkbox from './Checkbox';
 import Link from './Link';
-import Button from './Button';
+import Button from './GoogleButton';
 import Divider from './Divider';
-import Warn from '../assets/img/Warning.svg';
-import Close from '../assets/img/Closed.svg'
+import Warn from '../assets/ico/Warning.svg';
+import '../assets/css/toaster.css'
 import { toast } from 'react-toastify';
-//import { TriangleAlert, X } from 'lucide-react';
 
 function notifyEmail() {
-  toast('E-mail inválido', {
+  toast.warn('E-mail inválido', {
     bodyStyle: {background: '#FFF4D6'},
     
     progressStyle: {background:'#803D00'},
-    style: {background: '#FFF4D6', border: '1px solid #FCE07E'},
+    style: {background: '#FFF4D6', border: '1px solid #FCE07E', borderRadius: '0.5rem'},
     type: 'warning',
     icon: ({theme, type}) =>  <img src={Warn} alt='Warning alert icon'/>,
   })
@@ -24,7 +23,14 @@ function notifyEmail() {
 }
 
 function notifyPass() {
-  toast.error('Senha inválida')
+  toast.error('Senha inválida', {
+    bodyStyle: {background: '#FFF4D6'},
+    
+    progressStyle: {background:'#803D00'},
+    style: {background: '#FFF4D6', border: '1px solid #FCE07E', borderRadius: '0.5rem'},
+    type: 'warning',
+    icon: ({theme, type}) =>  <img src={Warn} alt='Warning alert icon'/>,
+  })
 }
 
 const LoginForm = () => {
@@ -47,7 +53,9 @@ const LoginForm = () => {
             />
             {errors.email && <div className="error-message">{errors.email}</div>}
           </div>
-           {/* <button onClick={notifyEmail}>Notify !</button> */}
+          {/*Adicionei esses dois botões abaixo para testar o toaster 😁
+            <button onClick={notifyEmail}>Notify !</button><br />
+           <button onClick={notifyPass}>Notify !</button> */}
           <div className="mb-3">
             <PasswordField
               label="Senha"

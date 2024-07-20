@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const HeaderLogin = () => {
   return (
     <div className="header mb-4">
       <h1 className="display-4">Olá,</h1>
@@ -9,4 +9,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderLogin;

@@ -15,7 +15,7 @@
 		display: block;
 		width: 50% !important;
 		height: 100vh;
-		background: url('./assets/img/wapperlogin.png');
+		background: url('../img/wapperlogin.png');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -291,8 +291,7 @@
 	  }
 	
 
-	.g-btn,
-	.g-btn:hover {
+	.g-btn {
 		display: flex;
 		padding: 0.5rem 0.75rem 0.5rem 1rem;
 		justify-content: center;

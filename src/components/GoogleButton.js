@@ -1,8 +1,8 @@
 import React from 'react';
-import logoGoogle from '../assets/img/Google.svg';
+import logoGoogle from '../assets/ico/Google.svg';
 import PropTypes from 'prop-types';
 
-const Button = ({ text, isGoogle, className }) => {
+const googleButton = ({ text, isGoogle, className }) => {
   return (
     <button className={className}>
       {text}
@@ -11,10 +11,10 @@ const Button = ({ text, isGoogle, className }) => {
   );
 };
 
-Button.propTypes = {
+googleButton.propTypes = {
   text: PropTypes.string.isRequired,
   isGoogle: PropTypes.bool,
   className: PropTypes.string,
 };
 
-export default Button;
+export default googleButton;

@@ -1,8 +1,10 @@
 import React from 'react';
-import LoginForm from './components/LoginForm';
 import { ToastContainer, toast } from 'react-toastify';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import Close from './assets/img/Closed.svg';
+import Close from './assets/ico/Closed.svg';
+import './assets/css/toaster.css';
+import LoginPage from './pages/LoginPage';
 
 
 const CloseButton = ({ closeToast }) => (
@@ -13,14 +15,15 @@ const CloseButton = ({ closeToast }) => (
 const App = () => {
   return (
     <>
-      <ToastContainer position='top-center' theme="colored" draggable closeButton={CloseButton}
-
-      />
+    <Router>
+      <ToastContainer position='top-center' theme="colored" draggable closeButton={CloseButton} />
       <div className="app">
-        <div className="wrapper">
-        </div>
-        <LoginForm />
+        <Routes>
+          <Route path="/" element={<LoginPage />} /> 
+          {/* Como por enquanto só temos a página de login, ela será nossa única rota */}
+        </Routes>
       </div>
+    </Router>
     </>
   );
 };

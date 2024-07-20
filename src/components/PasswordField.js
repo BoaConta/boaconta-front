@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import eyeOn from '../assets/img/EyeOn.svg';
+import eyeOn from '../assets/ico/EyeOn.svg';
 
 const PasswordField = ({ label, placeholder, value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
