@@ -2,9 +2,9 @@ import React from 'react';
 import logoGoogle from '../assets/ico/Google.svg';
 import PropTypes from 'prop-types';
 
-const googleButton = ({ text, isGoogle, className }) => {
+const googleButton = ({ text, isGoogle, className, click }) => {
   return (
-    <button className={className}>
+    <button onClick={click} className={className}>
       {text}
       {isGoogle && <img src={logoGoogle} alt="Google Logo" className="ms-2" />}
     </button>
