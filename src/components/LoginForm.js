@@ -39,10 +39,22 @@ const LoginForm = () => {
       // Você pode adicionar uma notificação de sucesso aqui se desejar
       // notify('Login bem-sucedido!');
     } catch (error) {
-      if (error.response && error.response.data && error.response.data.message) {
-        notify(error.response.data.message);
+      const value = error.response?.data?.message;
+  
+      // Verifica se `value` é uma string e notifica
+      if (typeof value === 'string') {
+        return notify(value);
+      }
+      
+      // Verifica se `value` é um array e notifica cada item
+      if (Array.isArray(value)) {
+        value.forEach(message => {
+          if (typeof message === 'string') {
+            notify(message);
+          }
+        });
       } else {
-        notify('Ocorreu um erro desconhecido. Por favor, tente novamente.');
+        notify('Ocorreu um erro desconhecido. Por favor, tente novamente.'); // Mensagem genérica
       }
     }
   }
