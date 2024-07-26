@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from './Header';
+import Header from './Headerlogin';
 import InputField from './InputField';
 import PasswordField from './PasswordField';
 import Checkbox from './Checkbox';
@@ -35,9 +35,6 @@ const LoginForm = () => {
           'Content-Type': 'application/json'
         }
       });
-      console.log(response.data);
-      // Você pode adicionar uma notificação de sucesso aqui se desejar
-      // notify('Login bem-sucedido!');
     } catch (error) {
       const value = error.response?.data?.message;
   

@@ -184,7 +184,7 @@
   }
 
   .eye-btn:hover {
-		background: transparent !important;
+		background: transparent;
 	}
 
   .eye-btn img {

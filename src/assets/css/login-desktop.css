@@ -259,7 +259,7 @@
 	}
 
 	.eye-btn:hover {
-		background: transparent !important;
+		background: transparent;
 	}
 
 	.link {
@@ -336,7 +336,7 @@
 	}
 
 	.g-btn:hover {
-		background-color: #bb2d3b !important;
+		background-color: #bb2d3b;
 	}
 
 	.text-center {
