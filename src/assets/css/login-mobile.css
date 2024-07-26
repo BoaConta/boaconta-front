@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    font-family: Poppins;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+
+  .app {
+    display: flex;
+    height: 100vh;
+    padding: 0rem 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+  }
+
+  .conditional-br {
+    display: inline;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+
+  .header h1 {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Title/Large Bold */
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
+    /* 133.333% */
+    margin: 0;
+  }
+
+  .header p {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2rem;
+    /* 133.333% */
+    margin: 0;
+  }
+
+  .conditional-br {
+    display: block !important;
+  }
+
+  .forms-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    align-self: stretch;
+    width: 100% !important;
+
+  }
+
+  .input-field,
+  .password-field {
+    display: flex;
+    height: 5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+    width: 100% !important;
+  }
+
+  .input-field label,
+  .password-field label {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Title/Medium Regular */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0 !important;
+    /* 150% */
+  }
+
+  .mb-3,
+  .mb-4,
+  .mx-2,
+  .ms-2 {
+    margin: 0 !important;
+  }
+
+  .mb-3,
+  .mb-4 {
+    width: 100% !important;
+
+  }
+
+  .input-field input,
+  .password-field input {
+    width: 100% !important;
+    display: flex;
+    padding: 0.75rem 1rem;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+    border-radius: 0.5rem !important;
+    border: 1px solid var(--Gray-300, #C9C9C9);
+    background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
+  }
+
+  .input-field input::placeholder,
+  .password-field input::placeholder {
+    flex: 1 0 0;
+    color: var(--Gray-700, #858585);
+
+    /* Body/Large Regular */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 150% */
+    /* 150% */
+  }
+
+  .password-field input {
+    position: relative;
+  }
+
+  .eye-btn {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: 30%;
+    margin-left: -40px;
+    /* Ajuste conforme necessário */
+    z-index: 2;
+  }
+
+  .eye-btn:hover {
+		background: transparent;
+	}
+
+  .eye-btn img {
+    width: 1.25rem;
+    /* Ajuste conforme necessário */
+    height: 1.25rem;
+    /* Ajuste conforme necessário */
+  }
+
+  .options {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem !important;
+    border: 0.0625rem solid var(--Primary, #3498DB);
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .form-check-label {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Body/Medium Regular */
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    /* 142.857% */
+  }
+
+
+  .link {
+    color: var(--Primary, #3498DB);
+    text-align: center;
+
+    /* Title/Small Bold */
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+    /* 142.857% */
+    text-decoration: none;
+  }
+
+  .btn-login {
+    display: flex;
+    padding: 1rem 0.75rem 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    border: none;
+    background: var(--Primary, #3498DB);
+    color: var(--Gray-0, var(--Color-Typography-1-color-typography-1-pure, #FFF));
+    text-align: center;
+
+    /* Title/Medium Bold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    /* 150% */
+  }
+
+  .g-btn {
+    display: flex;
+    padding: 1rem 0.75rem 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    border: 0.7px solid var(--Primary, #3498DB);
+    background: #FFF;
+    color: #3498DB;
+    text-align: center;
+
+    /* Title/Medium Bold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    /* 150% */
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    margin: 0 !important;
+  }
+
+  .divider hr {
+    width: 15.40625rem;
+    height: 0.0625rem;
+    background: #858585;
+    margin: 0 !important;
+    /* Title/Small Bold */
+  }
+
+  .divider span {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+
+  .text-center {
+    margin: 0 !important;
+  }
+
+
+  /* 142.857% */
+}
+
+.create-account {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
