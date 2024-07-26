@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@media (max-width: 940px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-family: Poppins;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+
+  .app {
+    display: flex;
+    height: 50.75rem;
+    padding: 4rem 1rem;
+    justify-content: center;
+    gap: 0.625rem;
+    background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+  }
+
+  .conditional-br {
+    display: inline;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+
+  .header h1 {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Title/Large Bold */
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
+    /* 133.333% */
+    margin: 0;
+  }
+
+  .header p {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2rem;
+    /* 133.333% */
+    margin: 0;
+  }
+
+  .forms-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    align-self: stretch;
+  }
+
+  .input-field,
+  .password-field {
+    display: flex;
+    height: 5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+
+  .input-field label,
+  .password-field label {
+    color: var(--Gray-800, var(--Color-Typography-2-color-typography-2-pure, #414141));
+
+    /* Title/Medium Regular */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+  }
+
+  .input-field input,
+  .password-field input {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    line-height: 1.5rem;
+    border: 1px solid var(--Gray-300, #C9C9C9);
+    background: var(--Color-Typography-1-color-typography-1-pure, #FFF);
+  }
+
+  .input-field input::placeholder,
+  .password-field input::placeholder {
+    flex: 1 0 0;
+    color: var(--Gray-700, #858585);
+    /* Body/Large Regular */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 150% */
+  }
+
+  .password-field input {
+    position: relative;
+  }
+
+  .password-field button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    top: 40.25%;
+    background: transparent;
+    right: 6.5%;
+    cursor: pointer;
+    margin-left: -30px;
+  }
+
+  .options {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .checkbox input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--Primary, #3498DB);
+  }
+
+  .link {
+    color: var(--Primary, #3498DB);
+    text-align: center;
+
+    /* Title/Small Bold */
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+    /* 142.857% */
+    text-decoration: none;
+  }
+
+  .button,
+  .google-button {
+    display: block;
+    width: 100%;
+    padding: 0.625rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .button {
+    display: flex;
+    padding: 1rem 0.75rem 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    background: var(--Primary, #3498DB);
+    color: var(--Gray-0, var(--Color-Typography-1-color-typography-1-pure, #FFF));
+    text-align: center;
+
+    /* Title/Medium Bold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    /* 150% */
+  }
+
+  .google-button {
+    display: flex;
+    padding: 1rem 0.75rem 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    border: 0.7px solid var(--Primary, #3498DB);
+    background: var(--Gray-0, #FFF);
+    color: var(--Primary, #3498DB);
+    text-align: center;
+
+    /* Title/Medium Bold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    /* 150% */
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+
+  .divider hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #858585;
+    ;
+    margin: 0 0.5rem;
+  }
+
+  .create-account {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+}
